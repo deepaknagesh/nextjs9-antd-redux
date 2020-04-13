@@ -1,11 +1,14 @@
 {
+  "homepage": "https://deepaknagesh.github.io/nextjs-9-redux-example",
   "name": "nextjs-9",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "predeploy": "next build",
+    "deploy": "gh-pages -d .next"
   },
   "dependencies": {
     "isomorphic-fetch": "^2.2.1",
@@ -19,6 +22,7 @@
     "redux-saga": "^1.1.3"
   },
   "devDependencies": {
+    "gh-pages": "^2.2.0",
     "redux-devtools-extension": "^2.13.8"
   }
 }
