@@ -7,8 +7,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "predeploy": "next build",
-    "deploy": "gh-pages -d .next"
+    "export": "next export -o docs",
+    "build-export": "yarn build && yarn export",
+    "predeploy": "yarn build-export",
+    "deploy": "gh-pages -d docs"
   },
   "dependencies": {
     "isomorphic-fetch": "^2.2.1",
