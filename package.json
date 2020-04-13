@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "deploy": "next build && next export && git add . && git commit -m \"Deploy gh-pages\" && git push origin master && gh-pages -d out -t true"
+    "predeploy": "next build && next export",
+    "deploy": "gh-pages -d out -t true"
   },
   "dependencies": {
     "isomorphic-fetch": "^2.2.1",
