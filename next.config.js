@@ -1,5 +1,8 @@
+const assetPrefix = '/nextjs-9-redux';
+
 module.exports = {
     poweredByHeader: false,
+    assetPrefix: assetPrefix,
     webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
         // Note: we provide webpack above so you should not `require` it
         // Perform customizations to webpack config
