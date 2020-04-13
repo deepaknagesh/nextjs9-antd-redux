@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { Button } from "antd";
 
 import { increment, decrement, reset } from '../redux/tickers/actions'
 
@@ -28,9 +29,9 @@ class Counter extends Component {
                 <h1>
                     Count: <span>{count}</span>
                 </h1>
-                <button onClick={this.increment}>+1</button>
-                <button onClick={this.decrement}>-1</button>
-                <button onClick={this.reset}>Reset</button>
+                <Button onClick={this.increment}>+1</Button>
+                <Button onClick={this.decrement}>-1</Button>
+                <Button onClick={this.reset}>Reset</Button>
             </div>
         )
     }

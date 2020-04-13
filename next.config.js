@@ -1,15 +1,21 @@
-const assetPrefix = 'https://deepaknagesh.github.io/nextjs-9-redux/';
+const withLess = require('@zeit/next-less');
 
-module.exports = {
+const assetPrefix = 'https://deepaknagesh.github.io/nextjs9-antd-redux/';
+const isProd = process.env.NODE_ENV === "production";
+
+module.exports = withLess({
     poweredByHeader: false,
-    exportPathMap: function () { // /Next-React-Components
-        return {
-            "/": { page: "/2" },
-            "/2": { page: "/2" },
-            "/index": { page: "/2" },
-        }
+    lessLoaderOptions: {
+        javascriptEnabled: true
     },
-    assetPrefix: assetPrefix,
+    // exportPathMap: function () { // /Next-React-Components
+    //     return {
+    //         "/": { page: "/2" },
+    //         "/2": { page: "/2" },
+    //         "/index": { page: "/2" },
+    //     }
+    // },
+    // assetPrefix: isProd ? assetPrefix : "",
     webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
         // Note: we provide webpack above so you should not `require` it
         // Perform customizations to webpack config
@@ -27,4 +33,4 @@ module.exports = {
         // Important: return the modified config
         return config
     },
-}
+})
