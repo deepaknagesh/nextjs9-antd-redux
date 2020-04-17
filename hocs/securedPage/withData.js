@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import redirect from '../../helpers/redirect';
+//import redirect from '../../helpers/redirect';
 //import { getCookie } from '../../helpers/session';
 
 import 'isomorphic-fetch';
@@ -10,7 +10,7 @@ export default ComposedComponent =>
       const isLoggedIn = getCookie('id_token', context.req) ? true : false;
 	  
       if (!isLoggedIn || undefined === isActive) {
-        redirect(context, '/');
+        //redirect(context, '/');
       } else if (undefined !== context.req) {
        
       }
